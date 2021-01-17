@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Eventos cozinha</name>
+    <events>
+        <event-group description="" sid="621215602531736" title="MudarDirecao">
+            <sub-events>
+                <event-block sid="963269952579920">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="238119519993635" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Direcao</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="718487153197938" type="Direcao">
+                            <param id="0" name="Instance variable">Direcao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="726715864581053" type="System">
+                            <param id="0" name="Layout">Sala</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="188748121979850" title="PegarItem">
+            <sub-events>
+                <event-block sid="765116133872318">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="469494705994662" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Item</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="146711750644731" type="Item" />
+                        <action id="4" name="Set at XYZ" sid="310993611842520" type="ItensCozinha">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Z">0</param>
+                            <param id="3" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="233822468759153" title="AnalisaItensPegos">
+            <sub-events>
+                <event-block sid="912083809011060">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="286033695514477" type="System" />
+                        <condition id="2" name="Compare at XYZ" sid="936893855008359" type="ItensCozinha">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Z">0</param>
+                            <param id="3" name="Comparison">0</param>
+                            <param id="4" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="349019629691394" type="System">
+                            <param id="0" name="Object to create">Item</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">426</param>
+                            <param id="3" name="Y">252</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="126699695644941" type="Item">
+                            <param id="0" name="Width">78</param>
+                            <param id="1" name="Height">80</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

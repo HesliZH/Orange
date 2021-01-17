@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Eventos Sala</name>
+    <events>
+        <event-group description="" sid="445617030238645" title="MudarDireção">
+            <sub-events>
+                <event-block sid="120120920706267">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="140408418804640" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Direcao</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="804182674569994" type="Direcao">
+                            <param id="0" name="Instance variable">Direcao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="764644893887063" type="System">
+                            <param id="0" name="Layout">Cozinha</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="386525500667857" type="System">
+                            <param id="0" name="Variable">Cenario</param>
+                            <param id="1" name="Value">&quot;Cozinha&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="914671108344851" title="TelaCheia">
+            <sub-events>
+                <event-block sid="459370792941606">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="772806232991476" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Request fullscreen" sid="755890013766864" type="Browser">
+                            <param id="0" name="Mode">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
